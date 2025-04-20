@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>🎵 Music Control System 🎙️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎶 Music Player with Voice Assistant 🎙️</h1>
+
+        <div class="controls">
+            <button class="btn" onclick="controlMusic('play')">▶️ Play</button>
+            <button class="btn" onclick="controlMusic('pause')">⏸️ Pause</button>
+            <button class="btn" onclick="controlMusic('unpause')">▶️ Resume</button>
+            <button class="btn" onclick="controlMusic('next')">⏭️ Next</button>
+            <button class="btn" onclick="controlMusic('previous')">⏮️ Previous</button>
+        </div>
+
+        <div class="voice">
+            <button class="voice-btn" onclick="startVoice()">🎙️ Start Voice Command</button>
+            <p id="voice-status">Say: "play", "pause", "next", "previous", "resume"</p>
+        </div>
+
+        <footer>
+            <p>🎧 Powered by Yaydnesh Group</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
